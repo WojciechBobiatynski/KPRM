@@ -52,6 +52,7 @@
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
+			<version>2.1.214</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
@@ -128,6 +129,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+					<mainClass>pl.wbobiatynski.kprm.booksauthors.BooksAuthorsApplication</mainClass>
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
