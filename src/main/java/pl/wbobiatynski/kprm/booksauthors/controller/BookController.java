@@ -19,11 +19,12 @@ public class BookController {
     public BookController(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
-    @RequestMapping("/books")
+    @RequestMapping("/books/getAllBooks")
     @GetMapping
     public List<Book> findAll() {
+
         return bookService.listAllBooks();
-    }
+            }
     @DeleteMapping ("/deleteBook/{id}")
     public ResponseEntity<Book> deleteBook (@PathVariable int id) {
         bookService.deleteBook(id);

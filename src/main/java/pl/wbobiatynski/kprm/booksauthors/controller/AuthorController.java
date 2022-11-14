@@ -14,7 +14,7 @@ public class AuthorController {
     @Autowired
     private AuthorService authorService;
 
-    @PostMapping("/authors")
+    @PostMapping("/getAllAuthors")
     public List<Author> findAll() {
         return authorService.findAll();
     }
