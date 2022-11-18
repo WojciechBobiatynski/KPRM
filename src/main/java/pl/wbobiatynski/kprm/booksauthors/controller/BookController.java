@@ -13,20 +13,23 @@ import java.util.List;
 
 @RestController
 public class BookController {
+
     @Autowired
     BookService bookService ;
     public BookRepository bookRepository;
     public BookController(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
+
     @RequestMapping("/books/getAllBooks")
     @GetMapping
     public List<Book> findAll() {
-
         return bookService.listAllBooks();
-            }
+    }
+
     @DeleteMapping ("/deleteBook/{id}")
-    public ResponseEntity<Book> deleteBook (@PathVariable int id) {
+
+    public ResponseEntity<Book> deleteBook (@PathVariable Long id) {
         bookService.deleteBook(id);
         return ResponseEntity.noContent().build();
     }
