@@ -7,6 +7,6 @@ import java.util.List;
 public interface BookService {
      void createBook(String ISBN, String title, long authorId, String authorName, String authorSurname);
      void editBook(Integer id, String title, String ISBN);
-     void deleteBook(Integer id);
+     void deleteBook(Long id);
      List<Book> listAllBooks();
 }
